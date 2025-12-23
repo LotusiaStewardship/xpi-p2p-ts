@@ -1,0 +1,34 @@
+# Dependencies
+node_modules/
+dist/
+
+# Build outputs
+*.js
+*.d.ts
+*.js.map
+
+# Generated files
+**/*.fbs
+**/lib/nng-interface/**
+
+# Test files
+coverage/
+.nyc_output/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Submodules
+**/submodules/**/*

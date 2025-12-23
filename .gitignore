@@ -1,0 +1,10 @@
+.env
+node_modules
+.output
+dist
+test*
+!test/
+
+# ignore all of the fun documentation and summaries that Cursor
+# agents always build no matter if it's helpful or not 🙃
+.cursor/

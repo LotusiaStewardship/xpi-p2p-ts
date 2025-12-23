@@ -1,0 +1,47 @@
+# Source files
+*.ts
+tsconfig.json
+!dist/**/*.d.ts
+
+# Environment files (should never be published)
+.env
+.env.*
+*.env
+
+# Development files
+.git
+.gitignore
+.gitmodules
+.cursor/
+.output/
+node_modules/
+examples/
+test/
+tests/
+docs/
+scripts/
+
+# Test files
+*.test.js
+*.test.ts
+*.test.d.ts
+test.js
+testing.ts
+test-*.js
+test-*.d.ts
+dist/test.js
+dist/test.d.ts
+dist/testing.js
+dist/testing.d.ts
+dist/test-*.js
+dist/test-*.d.ts
+dist/eslint.config.*
+
+# Build configuration
+eslint.config.mjs
+.prettierrc.json
+.prettierignore
+
+# Documentation (keep README.md)
+TAPROOT_*.md
+VALIDATION_SUMMARY.txt

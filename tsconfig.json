@@ -1,0 +1,32 @@
+{
+  "exclude": [
+    "submodules",
+    "node_modules",
+    "examples",
+    "test",
+    "scripts",
+    "dist",
+    "test.ts",
+    "test.js",
+    "testing.ts",
+    "test-*.ts",
+    "test-*.js",
+    "**/*.test.ts"
+  ],
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./dist",
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM"]
+  }
+}

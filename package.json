@@ -1,0 +1,109 @@
+{
+  "name": "xpi-p2p-ts",
+  "version": "0.2.0",
+  "description": "TypeScript library for building decentralized P2P applications on the Lotus (XPI) network with libp2p",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./lib/musig2": {
+      "types": "./dist/lib/musig2/index.d.ts",
+      "import": "./dist/lib/musig2/index.js"
+    },
+    "./lib/musig2/*": {
+      "types": "./dist/lib/musig2/*.d.ts",
+      "import": "./dist/lib/musig2/*.js"
+    },
+    "./lib/discovery": {
+      "types": "./dist/lib/discovery/index.d.ts",
+      "import": "./dist/lib/discovery/index.js"
+    },
+    "./lib/discovery/*": {
+      "types": "./dist/lib/discovery/*.d.ts",
+      "import": "./dist/lib/discovery/*.js"
+    },
+    "./lib/swapsig": {
+      "types": "./dist/lib/swapsig/index.d.ts",
+      "import": "./dist/lib/swapsig/index.js"
+    },
+    "./lib/swapsig/*": {
+      "types": "./dist/lib/swapsig/*.d.ts",
+      "import": "./dist/lib/swapsig/*.js"
+    },
+    "./lib": {
+      "types": "./dist/lib/index.d.ts",
+      "import": "./dist/lib/index.js"
+    },
+    "./lib/*": {
+      "types": "./dist/lib/*.d.ts",
+      "import": "./dist/lib/*.js"
+    }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LotusiaStewardship/xpi-p2p-ts.git"
+  },
+  "keywords": [
+    "lotus",
+    "lotusia",
+    "tools",
+    "rpc",
+    "rank",
+    "xpi"
+  ],
+  "author": "Lotusia Stewardship",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LotusiaStewardship/xpi-p2p-ts/issues"
+  },
+  "homepage": "https://github.com/LotusiaStewardship/xpi-p2p-ts#readme",
+  "dependencies": {
+    "@chainsafe/libp2p-noise": "17.0.0",
+    "@libp2p/autonat": "3.0.7",
+    "@libp2p/bootstrap": "12.0.8",
+    "@libp2p/circuit-relay-v2": "4.1.0",
+    "@libp2p/dcutr": "3.0.7",
+    "@libp2p/gossipsub": "^15.0.9",
+    "@libp2p/identify": "4.0.7",
+    "@libp2p/interface": "3.1.0",
+    "@libp2p/interface-internal": "3.0.7",
+    "@libp2p/interface-peer-id": "2.0.2",
+    "@libp2p/kad-dht": "16.1.0",
+    "@libp2p/peer-id": "6.0.4",
+    "@libp2p/ping": "3.0.7",
+    "@libp2p/tcp": "11.0.7",
+    "@libp2p/upnp-nat": "4.0.7",
+    "@libp2p/webrtc": "5.0.15",
+    "@libp2p/websockets": "10.1.0",
+    "@libp2p/yamux": "8.0.1",
+    "@multiformats/multiaddr": "^12.0.0",
+    "@noble/hashes": "^1.7.2",
+    "libp2p": "3.1.0",
+    "xpi-ts": "^0.2.7"
+  },
+  "devDependencies": {
+    "@types/elliptic": "6.4.18",
+    "@types/node": "24.0.10",
+    "prettier": "3.6.2",
+    "tsx": "^4.21.0",
+    "typescript": "5.8.3",
+    "typescript-eslint": "8.47.0"
+  }
+}
